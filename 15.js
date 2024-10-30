@@ -1,19 +1,32 @@
 //Tạo một hàm nhận vào một chuỗi và trả về số lần xuất hiện của một ký tự cụ thể trong chuỗi đó.
-let text = 'adskfjgaskjdfghksagdjfjhl'
+// let document = 'adskfjgaaskjadfghksagdajfjhl'
 
 
-console.log(text[0]);
-
-
-// function string(text){
-//     let use = []
-//     for(let i = 0 ; i < text.length ; i++){
-
-//        use = text.push[i]
+// function checkstring(document, repeat) {
+//     let count = 0;
+//     for (let i = 0; i < document.length; i++) {
+//         if (document[i] === repeat) {
+//             count++
+//         }
 //     }
-//     return use
+//     return count
 // }
 
 
-//console.log(string(text));
- 
+// console.log(checkstring(document,'a'));
+
+
+const a = "kjdfhbkjasdhfkljsadhf";
+function check_String(b) {
+  const c = {};
+  for (let i = 0; i < b.length; i++) {
+    const check = b[i];
+    if (c[check]) {
+      c[check]++;
+    } else {
+      c[check] = 1;
+    }
+  }
+  return c;
+}
+console.log(check_String(a));
