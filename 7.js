@@ -3,4 +3,6 @@ function number(a, b) {
   return a > b ? a : b;
 }
 const a = number(20, 10);
-console.log(a);
+const b = number(10, 20);
+const c = number(20, 10);
+console.log(a, b, c);
