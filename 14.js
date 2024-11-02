@@ -9,3 +9,10 @@ function positiveinteger(numbers) {
 }
 let numbers = [1, 2, 3, 4, 5];
 console.log(positiveinteger(numbers));
+
+
+let a =10;
+
+function name(params) {
+  
+}

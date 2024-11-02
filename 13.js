@@ -2,6 +2,6 @@
 const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 
 function number(x) {
-  return x >= 5;
+  return a.filter((x) => x > 5);
 }
-console.log(number());
+console.log(number(numbers));
