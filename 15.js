@@ -15,16 +15,18 @@
 
 const document = "isnvijnvdufvfid";
 
-function check_string() {
-  let a = {};
-  for (let i = 0; i < document.length; i++) {
-    const check = document[i];
-    if (a[check]) {
-      a[check]++;
-    } else {
-      a[check] = 1;
-    }
-  }
-  return a
-}
-console.log(check_string('a'));
+// function check_string() {
+//   let a = {};
+//   for (let i = 0; i < document.length; i++) {
+//     const check = document[i];
+//     if (a[check]) {
+//       a[check]++;
+//     } else {
+//       a[check] = 1;
+//     }
+//   }
+//   return a
+// }
+// console.log(check_string('a'));
+
+console.log(document[3]);
