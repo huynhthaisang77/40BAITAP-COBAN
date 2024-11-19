@@ -29,4 +29,3 @@ const document = "isnvijnvdufvfid";
 // }
 // console.log(check_string('a'));
 
-console.log(document[3]);

@@ -3,5 +3,8 @@
 
 const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 
-const a = numbers.filter((x) => x % 2 !== 0);
-console.log(a);
+function odd_number_filter(arr) {
+    return arr.filter((x) => x % 2 !== 0);
+}
+console.log(odd_number_filter(numbers));
+

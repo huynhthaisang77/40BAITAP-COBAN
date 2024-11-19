@@ -1,68 +1,59 @@
 //35. Viết một chương trình quản lý danh sách công việc (to-do list) với khả năng thêm, sửa và xóa công việc.
 
 // Hàm để thêm một to-do
+let todos = []; // Mảng chứa danh sách công việc
+
+// Gắn sự kiện cho nút Add
+document.getElementById("addButton").addEventListener("click", addTodo);
+
 function addTodo() {
-    const task = inputTask.value;
-  
-    if (task.trim() === "") {
-      alert("Vui lòng nhập một công việc.");
-      return;
-    }
-  
-    // Tạo phần tử <li> mới
+  const inputElement = document.getElementById("add");
+  const todoText = inputElement.value;
+
+  if (todoText !== "") {
+    todos.push(todoText);
+    inputElement.value = "";
+    displayTodos();
+  } else {
+    alert("Vui lòng nhập nội dung công việc!");
+  }
+}
+
+function displayTodos() {
+  const todoListElement = document.querySelector("#Todolist ul");
+  todoListElement.innerHTML = "";
+
+  todos.forEach((todo, index) => {
     const li = document.createElement("li");
-    const textNode = document.createTextNode(task); // Tạo nội dung cho <li>
-    li.appendChild(textNode); // Thêm nội dung vào <li>
-  
-    // Tạo nút Edit
+    li.textContent = todo;
+
     const editButton = document.createElement("button");
     editButton.textContent = "Edit";
-    editButton.onclick = function () {
-      editTodo(this);
-    };
-  
-    // Thêm nút Edit vào <li>
-    li.appendChild(editButton);
-  
-    // Tạo nút Delete
+    editButton.addEventListener("click", function() {
+      editTodo(index);
+    });
+
     const deleteButton = document.createElement("button");
     deleteButton.textContent = "Delete";
-    deleteButton.onclick = function () {
-      deleteTodo(this);
-    };
-  
-    // Thêm nút Delete vào <li>
-    li.appendChild(deleteButton);
-  
-    // Bắt sự kiện khi nhấn vào to-do để đánh dấu hoàn thành
-    li.addEventListener("click", function () {
-      li.classList.toggle("completed");
+    deleteButton.addEventListener("click", function() {
+      deleteTodo(index);
     });
-  
-    // Thêm li vào danh sách
-    todoList.appendChild(li);
-  
-    // Xóa giá trị input sau khi thêm
-    inputTask.value = "";
+
+    li.appendChild(editButton);
+    li.appendChild(deleteButton);
+    todoListElement.appendChild(li);
+  });
+}
+
+function editTodo(index) {
+  const newTodo = prompt("Nhập nội dung mới:", todos[index]);
+  if (newTodo !== null && newTodo !== "") {
+    todos[index] = newTodo;
+    displayTodos();
   }
-  
-  // Hàm để xóa một to-do
-  function deleteTodo(button) {
-    const li = button.parentElement;
-    todoList.removeChild(li);
-  }
-  // hàm thay đổi giá trị li
-  function editTodo(button) {
-    const li = button.parentElement;
-    // Lấy nội dung hiện tại
-    const currentTask = li.firstChild.nodeValue;
-    // Hiển thị hộp thoại nhập
-    const newTask = prompt("Chỉnh sửa công việc:", currentTask);
-  
-    if (newTask && newTask.trim() !== "") {
-      // Cập nhật nội dung mới
-      li.firstChild.nodeValue = newTask;
-    } else {
-      alert("Vui lòng nhập một công việc hợp lệ.");
-    }
-  }
+}
+
+function deleteTodo(index) {
+  todos.splice(index, 1);
+  displayTodos();
+}

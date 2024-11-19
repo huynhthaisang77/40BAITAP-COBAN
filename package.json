@@ -1,0 +1,13 @@
+{
+  "type": "commonjs",
+  "name": "40baitap-coban",
+  "version": "1.0.0",
+  "description": "Cơ bản: 1. Viết một chương trình in ra \"Hello, World!\" trong JavaScript. 2. Khai báo một biến với từ khóa `let` và gán cho nó một giá trị. 3. Tạo một hàm nhận một số và trả về bình phương của nó. 4. Viết một hàm kiểm tra số chẵn hay lẻ. 5. Tạo một mảng chứa tên của 5 quốc gia và in ra phần tử thứ ba. 6. Tạo một vòng lặp `for` để in ra các số từ 1 đến 10. 7. Tạo một hàm nhận 2 số và trả về số lớn hơn. 8. Viết một chương trình kiểm tra xem một chuỗi có phải là chuỗi đảo ngược của chuỗi khác không. 9. Sử dụng phương thức `map()` để nhân đôi tất cả các phần tử trong một mảng số. 10. Sử dụng `filter()` để lọc ra các số lẻ từ mảng `[1, 2, 3, 4, 5, 6, 7]`.",
+  "main": "1.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
