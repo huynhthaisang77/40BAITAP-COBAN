@@ -1,9 +1,9 @@
 //35. Viết một chương trình quản lý danh sách công việc (to-do list) với khả năng thêm, sửa và xóa công việc.
 
-// Hàm để thêm một to-do
-let todos = []; // Mảng chứa danh sách công việc
 
-// Gắn sự kiện cho nút Add
+let todos = []; 
+
+
 document.getElementById("addButton").addEventListener("click", addTodo);
 
 function addTodo() {
