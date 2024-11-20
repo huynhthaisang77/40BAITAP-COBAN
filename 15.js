@@ -13,7 +13,15 @@
 
 // console.log(checkstring(document,'a'));
 
-const document = "isnvijnvdufvfid";
+const document = "isfnvijfnvdufvfifd";
+
+function checkstring(a, c) {
+    let arr = a.split('') // e dùng split để biến chuỗi thành mảng ký tự 
+    let filterarr = arr.filter(x => x === c) // e dùng filter để lấy ra các ký tự trùng khớp
+    return filterarr.length
+}
+
+console.log(checkstring(document,'f'));
 
 // function check_string() {
 //   let a = {};

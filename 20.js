@@ -6,3 +6,16 @@ function sort_array(arr) {
     return arr.sort((a, b) => b - a);
 }
 console.log(sort_array(numbers));
+
+
+
+function array_arrange(x) {
+    const arr = []
+    for (let i = 0; i < x.length; i++) {
+        if (x[i]++) {
+            arr.push(x[i])
+        }
+    }
+    return arr
+}
+console.log(array_arrange(numbers));

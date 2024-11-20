@@ -2,11 +2,11 @@
 let a =1
 
 
-const promise1 = new Promise((resolve, reject) => {
+const promise1 = new Promise((res, rej) => {
   if (a > 0) {
-    resolve('success!');
+    res('success!');
   } else {
-    reject('error');
+    rej('error');
   }
 });
 

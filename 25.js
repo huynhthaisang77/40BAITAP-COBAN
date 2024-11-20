@@ -4,7 +4,7 @@ const text = ['h', 'g', 'f', 'e', 'd', 'c', 'b', 'a'];
 
 
 function checkarray(x) {
-   return [...x].sort()
+   return x.sort()
     }
 console.log(checkarray(text));
 

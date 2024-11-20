@@ -14,4 +14,5 @@ function getAge(y) {
 
 console.log(getFullName(users));
 
+console.log(users.fullName);
 
